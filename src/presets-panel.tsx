@@ -111,7 +111,6 @@ const ROAD_SIDE_COMPONENT_CONTROLS: Array<{
 
 const activateRoadNetworkTool = () => {
   const editor = useEditor.getState()
-  editor.setStructureLayer('elements')
   editor.setCatalogCategory(null)
   editor.setToolDefaults(ROAD_NETWORK_KIND as never, null)
   editor.setMode('build')
