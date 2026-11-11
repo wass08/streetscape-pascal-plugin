@@ -18,6 +18,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@types/three": "^0.184.0",
+    "esbuild": "^0.25",
     "react": "^19",
     "three": "^0.185",
     "typescript": "6.0.3",
@@ -38,6 +39,10 @@
     ".": {
       "types": "./src/index.ts",
       "default": "./src/index.ts"
+    },
+    "./render": {
+      "types": "./src/render.ts",
+      "default": "./src/render.ts"
     }
   },
   "bugs": {
@@ -61,6 +66,7 @@
   "license": "MIT",
   "scripts": {
     "check-types": "tsc --noEmit",
+    "check:render": "bun scripts/check-render-entry.ts",
     "test": "bun test"
   },
   "type": "module",

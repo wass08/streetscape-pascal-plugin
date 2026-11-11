@@ -2,7 +2,7 @@ import type { ParametricDescriptor } from "@pascal-app/core";
 import type { AnyNodeId } from "@pascal-app/core";
 import { RoadCrossSectionInspector } from "./road-network-cross-section-inspector";
 import { RoadJunctionInspector } from "./road-network-junction-inspector";
-import { RoadsideDecorationInspector } from "./roadside-decoration-rules";
+import { RoadsideDecorationInspector } from "./roadside-decoration-inspector";
 import { RoadStylePresetLibrary } from "./road-network-preset-library";
 import { RoadSplinePointEditor } from "./road-network-spline-inspector";
 import { RoadTerrainEditor } from "./road-network-terrain-inspector";
