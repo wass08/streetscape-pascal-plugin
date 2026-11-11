@@ -75,7 +75,7 @@ describe('road editing control visibility', () => {
       'utf8',
     )
     const rendererSource = readFileSync(
-      new URL('./road-network-renderer.tsx', import.meta.url),
+      new URL('./road-network-renderer.edit.tsx', import.meta.url),
       'utf8',
     )
     const extensionSource = readFileSync(

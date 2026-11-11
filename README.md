@@ -11,6 +11,7 @@ cd streetscape-pascal-plugin
 bun install
 bun run check-types
 bun test
+bun run check:render
 ```
 
 The package uses only public `@pascal-app/*` APIs and is structurally identical
@@ -115,3 +116,21 @@ setPluginDiscovery(async () => [streetscapePlugin])
 
 The editor app separately imports `streetscapeHostPanel` to surface the
 Streetscape placement panel. Panels are not part of the v1 core plugin manifest.
+
+## Read-only viewers
+
+A viewer that only displays saved scenes can load the render-only entry instead
+of the root plugin. It registers the same kinds, schemas, versions, defaults and
+migrations, with their renderers, geometry, materials and read-only floor plans,
+and does not import `@pascal-app/editor`:
+
+```ts
+import { streetscapeRenderPlugin } from '@pascal-app/plugin-streetscape/render'
+
+await loadPlugin(streetscapeRenderPlugin)
+```
+
+Placement tools, previews, handles, parameters, plan editing, quick actions, the
+host panel and the scene normalization the editor runs are only in the root
+export. Load one entry or the other, not both. `bun run check:render` bundles
+`./render` and fails if it reaches `@pascal-app/editor` or `next`.

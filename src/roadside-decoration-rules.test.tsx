@@ -19,8 +19,8 @@ import {
 	materializeRoadsideDecorationSelection,
 	ROADSIDE_LAMP_MIN_VERGE_WIDTH,
 	ROADSIDE_SIGN_LAMP_MIN_SEPARATION,
-	RoadsideDecorationInspector,
 } from "./roadside-decoration-rules";
+import { RoadsideDecorationInspector } from "./roadside-decoration-inspector";
 import { roadSignParametrics } from "./road-sign-parametrics";
 import { RoadNetworkNode } from "./schema";
 import {
